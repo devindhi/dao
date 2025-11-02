@@ -23,6 +23,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Make Maven wrapper executable
+        run: chmod +x ./mvnw
+
       - name: Publish to GitHub Packages
         run: ./mvnw deploy
         env:
